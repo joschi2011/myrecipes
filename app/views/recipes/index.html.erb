@@ -3,26 +3,23 @@
 <% @recipes.each do |recipe| %>
   <div class="row"> 
 
-   <div class="col-md-2">
-      <section class = "chef_info center">
-       <%= link_to gravatar_for(recipe.chef, size: 100) %>
-       <h5>Chef Name: <%= recipe.chef.chefname %></h5>
-      </section>
-    </div>
-    
-    <div class="col-lg-8 well">
-      <section class="chef_info center">
-        <h4><%= link_to recipe.name, recipe_path(recipe) %></h4>
-        <p> <%= recipe.summary %></p>
-        <p>
-          <span class="quiet"><small>about <%= time_ago_in_words(recipe.created_at) %> ago</small></span>
-        </p>
-      </section>
-    </div>
-    <hr/>
-    
+     <div class="col-md-2">
+        <section class = "chef_info center">
+         <%= link_to gravatar_for(recipe.chef, size: 100) %>
+         <h5>Chef Name: <%= recipe.chef.chefname %></h5>
+        </section>
+      </div>
+      
+      <div class="col-lg-6 well">
+          <h4><%= link_to recipe.name, recipe_path(recipe) %></h4>
+          <p> <%= recipe.summary %></p>
+          <p> <span class="quiet"><small>about <%= time_ago_in_words(recipe.created_at) %> ago</small></span></p>
+      </div>
+      
+      <div class="col-lg-4 well">
+          <%= image_tag(recipe.picture.url, size: "130x130", class: "gravitar") if recipe.picture? %>
+      </div>
+
   </div>
-    
-  
-  
+  <hr/>
 <% end %>
