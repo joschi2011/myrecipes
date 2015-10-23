@@ -13,6 +13,7 @@ def index
     @chef = Chef.new(chef_params)
     if @chef.save
       flash[:success] = "your account has been created successfully"
+      session[:chef_id] = @chef.id
       redirect_to recipes_path
     else
       render 'new'
