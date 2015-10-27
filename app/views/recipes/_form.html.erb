@@ -10,6 +10,9 @@
         
         <%= f.label :description %>
         <%= f.text_area :description, rows: 10 %>
+
+        <%= f.label :source %>
+        <%= f.text_field :source %>
         
         <strong>Styles:</strong>
         <%= f.collection_check_boxes :style_ids, Style.all, :id, :name do |cb| %>
