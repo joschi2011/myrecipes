@@ -1,29 +1,31 @@
 <div class="center jumbotron">
-  <H1> Welcome to MyRecipes App</H1>
-  <h2> This is the home page for the Professional Ruby on Rails Developer Course on Udemy</h2>
-  <%= link_to "Sign up now!", register_path, class: "btn btn-lg btn-success" %>
+  <div class="well-reverse">
+    <H1> Welcome to the Eat Well App</H1>
+    <h2> Come and join us to share recipes and have fun preparing meals again.</h2>
+    <%= link_to "Sign up now!", register_path, class: "btn btn-lg btn-success" %><br><br>
+  </div>
 </div>
 
 <div class="row">
   <div class="col-lg-4">
     <h3 class="midrow">
-      View Recipes as Guest User
+      View Recipes as Guest 
     </h3>
     <h2 class="left">Browse and view recipes as a guest and Sign up later</h2>
-    <p><%= link_to "Browse Recipe Listings", recipes_path, class: "btn btn-warning btn-small" %></p>
+    <p><%= link_to "Browse Recipes", recipes_path, class: "btn btn-warning btn-small" %></p>
   </div>
   <div class="col-lg-4">
     <h3 class="midrow">
       Sign in to your account
     </h3>
     <h2 class="left">Add/update your recipes/create reviews/like-dislike recipes and much much more!</h2>
-    <p><%= link_to "Log in to your account",  login_path, class: "btn btn-warning btn-small" %></p>
+    <p><%= link_to "Log Me In",  login_path, class: "btn btn-warning btn-small" %></p>
   </div>
   <div class="col-lg-4">
     <h3 class="midrow">
-      View Recipes as Guest User
+      Food Hacks
     </h3>
-    <h2 class="left">Browse and view recipes as a guest and Sign up later</h2>
-    <p><%= link_to "Browse Recipe Listings", "", class: "btn btn-warning btn-small" %></p>
+    <h2 class="left">Find speedy ways to do cyt a butternut sqash or deseed a pomegranite and much more</h2>
+    <p><%= link_to "Food Hacks", "", class: "btn btn-warning btn-small" %></p>
   </div>
 </div>

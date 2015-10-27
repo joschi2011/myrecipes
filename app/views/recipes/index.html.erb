@@ -21,7 +21,7 @@
         </section>
       </div>
       
-      <div class="col-lg-6 well">
+      <div class="col-lg-8 well">
           <h4><%= link_to recipe.name, recipe_path(recipe) %></h4>
           <p> <%= recipe.summary %></p>
           <% if recipe.styles.any? %> <p>Styles: <%= render recipe.styles %></p> <% end %>
@@ -40,7 +40,7 @@
           </div>
       </div>
       
-      <div class="col-lg-4 well">
+      <div class="col-lg-2">
           <%= image_tag(recipe.picture.url, size: "130x130", class: "gravitar") if recipe.picture? %>
       </div>
 
