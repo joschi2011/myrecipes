@@ -12,8 +12,8 @@
         <%= f.password_field :password %>
         
         <%= f.label :profile %>
-        <%= f.text_field :profile %>
-        
+        <%= f.text_area :profile, rows: 10 %>
+
         <%= f.submit(@chef.new_record? ? 'Register' : 'Edit Profile', class: "btn btn-success") %>
       <% end %>
     
